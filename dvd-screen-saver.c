@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <sys/ioctl.h>
-#include "atributes.h"
 
+#define ESC "\033"
 #define home()                      printf(ESC "[H");
 #define clrscr()                    printf(ESC "[2J");
 #define gotoxy(x,y)                 printf(ESC "[%d;%dH", y, x);
@@ -17,14 +17,6 @@ enum DIRECTION {
 
 int HEIGHT = 0;
 int WIDTH = 0;
-
-void move_up_right(int*, int*);
-
-void move_up_left(int*, int*);
-
-void move_down_right(int*, int*);
-
-void move_down_left(int*, int*);
 
 void move(enum DIRECTION*, int*, int*);
 
