@@ -4,12 +4,8 @@
 #include <sys/ioctl.h>
 
 #define ESC "\033"
-#define home()                      printf(ESC "[H");
-#define clrscr()                    printf(ESC "[2J");
 #define gotoxy(x,y)                 printf(ESC "[%d;%dH", y, x);
 #define hide_cursor()               printf(ESC "[?25l");
-#define resetcolor()                printf(ESC "[0m");
-#define set_display_atrib(color)    printf(ESC "[%dm", color);
 
 enum DIRECTION {
     UP_RIGHT, UP_LEFT, DOWN_RIGHT, DOWN_LEFT
