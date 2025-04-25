@@ -20,6 +20,7 @@ void check_collision(int*, int*, enum DIRECTION*);
 
 int main(void){
     
+    srand(time(NULL));
     //pulling terminal size
     struct winsize w;
     ioctl(0, TIOCGWINSZ, &w);
@@ -33,9 +34,9 @@ int main(void){
 
     //setup
     int x, y;
-    x = rand() % (WIDTH - 4);
-    y = rand() % (HEIGHT - 2);
-    enum DIRECTION direction = rand() % 5;
+    x = rand() % (WIDTH - 10);
+    y = rand() % (HEIGHT - 5);
+    enum DIRECTION direction = rand() % 4;
     hide_cursor();
 
     //main loop
